@@ -1,30 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<title>魏武豪个人站点</title>
-	<meta charset="utf-8">
-	<style type="text/css">
-	*{
-		margin: 0px;
-		padding: 0px;
-		font-family: 微软雅黑;
-
-	}
-	body{
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: 微软雅黑;
+		}
+		body{
 		background-position: 100% 50%;
 		background-image: url('7.jpg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		z-index:1;
 	}
-	.head{
-    width: 100%;
-    height: 80px;
-    background-color: #ccc;
-    color: #444;
-    line-height: 80px;
-    text-align: center;
-	}
-	.nav{
+
+		.container{
+			width:1100px;
+			padding:0px 1px;
+			margin: auto;
+			margin-top: 2px;
+		}
+		
+		.carousel{
+			height:300px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.image_reel{
+			position: absolute;
+			left:0px;
+			top:0px;
+		}
+
+		.image_reel img{
+			float: left;
+		}
+		
+		.paging{
+			position: absolute;
+			bottom:20px;
+			right:20px;
+			display: none;
+		}
+
+		.paging a{
+			text-decoration: none;
+			color:#fff;
+			padding:0px 5px;
+		}
+
+		.paging a:hover{
+			background: #920000;
+			font-weight:bold;
+		}
+
+		.paging a.active{
+			background: #920000;
+			font-weight:bold;
+		}
+		.nav{
 		width:100%;
 		height:40px;
 		background-color: gray;
@@ -60,6 +98,13 @@
 	background-color:#444;
 	color:#efefef;
 }
+#headtou{
+		margin-top: 20px;
+    width: 100%;
+    height: 80px;
+    color: #444;
+    text-align: center;
+	}
 	.middle{
 		width: 1100px;
 		margin: auto;
@@ -114,33 +159,32 @@
 		float: left;
 		overflow: hidden;
 	}
-	form{
-        position: absolute;
-	}
-	.middle_top2{
-		width: 1100px;
-		height: 733px;
-		margin: 2px auto;
-		overflow: hidden;
-	}
+	.middle_top_left img:hover{
+		cursor: pointer;
+       transform: scale(1.3);
 
-	#dingweikuang{
-		position: absolute;
-		width:150px;
-		height: 25px;
-		left: 1000px;
-		top: 29px;
 	}
-	button{
-        width:45px; 
-       height:30px;
-       text-align: center;
-       line-height: 25px;
-       position: absolute;
-       left: 1150px;
-       top: 29px;
+	.middle_top_middle img:hover{
+		cursor: pointer;
+       transform: scale(1.3);
+
 	}
-	 img:hover{
+	.middle_top_right img:hover{
+		cursor: pointer;
+       transform: scale(1.3);
+
+	}
+	.eee img:hover{
+		cursor: pointer;
+       transform: scale(1.3);
+
+	}
+	.eee1 img:hover{
+		cursor: pointer;
+       transform: scale(1.3);
+
+	}
+	.middle_top2 img:hover{
 		cursor: pointer;
        transform: scale(1.3);
 
@@ -154,13 +198,13 @@
 		width: 400px;
 		height: 160px;
 		margin:auto;
-		padding-top:35px;
+		padding-top:25px;
 	}
 	.foot_middle ul{
 		list-style: none;
 	}
 	.foot_middle li{
-		margin-top: 10px;
+		margin-top: 8px;
 	}
 	.foot_middle ul li a{
 		margin-top:30px;
@@ -173,57 +217,80 @@
 		text-decoration:underline;
 		color:#444;
 	}
-
+	.middle_top2{
+		width: 1100px;
+		height: 733px;
+		margin: 2px auto;
+		overflow: hidden;
+	}
+    .top:hover{
+			opacity:0.7;
+		}
 
 	</style>
+	<script src="jquery.min.js"></script>
 </head>
 <body>
-<form action="" method="">
-<input id="dingweikuang" type="text" name="sousuo" 
- value="请输入搜索词">
-<button type="submint" value="搜索">搜索</button>
-</form>
-<div class="head">
-<h1>个人网站</h1>
+<div id="headtou">
+<h1  margin-top='20px'>个人网站</h1>
 
 </div>
 <div class="nav">
    <div class="nav_middle">
    <ul>
     <li><a href="xiaoxueqi.html">首页</a></li>
-    <li><a href="xiaoxueqi1.html" target="_blank">个人简历</a></li>
+    <li><a href="xiaoxueqi1.html" target="_blank" >个人简历</a></li>
     <li ><a href="xiaoxueqi1.html" target="_blank">羽毛球</a></li>
     <li ><a href="xiaoxueqi1.html" target="_blank">友情填写</a></li>
    </ul>
   </div>
 </div>
-<div class="midde">
+	<div class="container">
+		<div class="carousel">  
+		    <div class="window">  
+		        <div class="image_reel">  
+		            <a href="#"><img src="8.jpg" alt="" /></a>  
+		            <a href="#"><img src="9.jpg" alt="" /></a>  
+		            <a href="#"><img src="10.jpg" alt="" /></a>  
+		        </div>  
+		    </div>  
+		    <div class="paging">  
+		        <a href="#" rel="1">1</a>  
+		        <a href="#" rel="2">2</a>  
+		        <a href="#" rel="3">3</a>  
+		    </div>  
+		</div>	
+	</div>
+	<div class="midde">
 <div class="midde_top">
-<div class="middle_top_left">
-<img src="1.jpg" width="498px" height="498px">
-</div>
-<div class="middle_top_middle">
-<img src="2.jpg" width="398px" height="498px">
-</div>
-<div class="middle_top_right">
-<img src="3.jpg" width="198px" height="498px">
-</div>
+  <div class="middle_top_left">
+            <img src="1.jpg" width="498px" height="498px">
+          </div>
+    <div class="middle_top_middle">
+                <img src="2.jpg" width="398px" height="498px">
+    </div>
+  <div class="middle_top_right">
+            <img src="3.jpg" width="198px" height="498px">
+      </div>
 </div>
 <div class="midde_top1">
-<div class="eee">
+      <div class="eee">
 <img src="4.jpg" width="648px" height="431px">
-  </div>
-  <div class="eee1" >
+           </div>
+           <div class="eee1" >
   <img src="5.jpg" width="448px" height="431px">
-  </div>
-  </div>
-  
+            </div>
+                  </div
+       </div>
   </div>
   <div class="middle_top2">
   <img src="6.jpg" width="1100px" height="733px" >
 
   </div>
   <div class="foot">
+  <div class='top'>
+					<span></span>	
+				</div>
   <div class="foot_middle">
   <ul>
     <li><a href="" >
@@ -242,8 +309,65 @@
          <p>厦门软件学院链接
            </p>
     </a></li>
+    <li><a href="" >
+       <h3>回到顶部</h3>
+      </a>
+    </li>
   </ul>
   </div>
   </div>
 </body>
+<script>
+// // 第一步
+$(".paging").show();  
+$(".paging a:first").addClass("active");  
+   
+// //Get size of the image, how many images there are, then determin the size of the image reel.  
+var imageWidth = $(".window").width();  
+var imageSum = $(".image_reel img").size();  
+var imageReelWidth = imageWidth * imageSum;  
+   
+// //Adjust the image reel to its new size  
+$(".image_reel").css({'width' : imageReelWidth});   
+
+// // 第二步
+// //Paging  and Slider Function  
+rotate = function(){  
+    var triggerID = $active.attr("rel") - 1; //Get number of times to slide  
+    var image_reelPosition = triggerID * imageWidth; //Determines the distance the image reel needs to slide  
+   
+    $(".paging a").removeClass('active'); //Remove all active class  
+    $active.addClass('active'); //Add active class (the $active is declared in the rotateSwitch function)  
+   
+    //Slider Animation  
+    $(".image_reel").animate({  
+        left: -image_reelPosition  
+    }, 500 );  
+   
+};   
+   
+rotateSwitch = function(){  
+    play = setInterval(function(){ 
+        $active = $('.paging a.active').next(); 
+        if ( $active.length === 0) {   
+            $active = $('.paging a:first'); 
+        }  
+        rotate(); 
+    }, 2000);   
+};  
+   
+rotateSwitch(); 
+$(".image_reel a").hover(function() {  
+    clearInterval(play);  
+}, function() {  
+    rotateSwitch();  
+});   
+$(".paging a").click(function() {  
+    $active = $(this);   
+    clearInterval(play);  
+    rotate();  
+    rotateSwitch();  
+    return false;  
+});
+</script>
 </html>
